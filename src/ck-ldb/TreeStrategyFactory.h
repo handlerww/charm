@@ -19,6 +19,7 @@ class TreeStrategyFactory
                                                        json& config)
   {
     using namespace TreeStrategy;
+    if (name == "GreedyNorm") return new GreedyNorm<O, P, S>(config);
     if (name == "Greedy") return new Greedy<O, P, S>();
     if (name == "GreedyRefine") return new GreedyRefine<O, P, S>(config);
     if (name == "RefineA") return new RefineA<O, P, S>();
